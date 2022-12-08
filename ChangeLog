@@ -1,3 +1,272 @@
+2022-02-17  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* data/downloadGenericKernels.sh, data/saturn.tm.in,
+	  data/uranus.tm.in:
+	  Updated to latest Saturn and Uranus satellites ephemeris.
+
+2022-02-14  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* matlab/DSKMice02.m[DEAD], matlab/DSKMiceUser.m[DEAD],
+	  matlab/DSKtol.m[DEAD]:
+	  Removed as not part of N0067 version.
+
+2022-02-14  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* whats.new, matlab/MiceDAS.m, matlab/MiceDLA.m, matlab/MiceDSK.m,
+	  matlab/MiceDtl.m, matlab/MiceFrm.m, matlab/MiceGF.m,
+	  matlab/MiceOccult.m, matlab/MiceOsc.m, matlab/MiceUser.m,
+	  matlab/cspice_axisar.m, matlab/cspice_azlcpo.m,
+	  matlab/cspice_azlrec.m, matlab/cspice_b1900.m,
+	  matlab/cspice_b1950.m, matlab/cspice_badkpv.m,
+	  matlab/cspice_bltfrm.m, matlab/cspice_bodc2n.m,
+	  matlab/cspice_bodc2s.m, matlab/cspice_boddef.m,
+	  matlab/cspice_bodfnd.m, matlab/cspice_bodn2c.m,
+	  matlab/cspice_bods2c.m, matlab/cspice_bodvcd.m,
+	  matlab/cspice_bodvrd.m, matlab/cspice_ccifrm.m,
+	  matlab/cspice_cgv2el.m, matlab/cspice_chbder.m,
+	  matlab/cspice_chbigr.m, matlab/cspice_chbint.m,
+	  matlab/cspice_chbval.m, matlab/cspice_cidfrm.m,
+	  matlab/cspice_ckcls.m, matlab/cspice_ckcov.m,
+	  matlab/cspice_ckfrot.m, matlab/cspice_ckfxfm.m,
+	  matlab/cspice_ckgp.m, matlab/cspice_ckgpav.m,
+	  matlab/cspice_ckgr02.m, matlab/cspice_ckgr03.m,
+	  matlab/cspice_cklpf.m, matlab/cspice_ckmeta.m,
+	  matlab/cspice_cknr02.m, matlab/cspice_cknr03.m,
+	  matlab/cspice_ckobj.m, matlab/cspice_ckopn.m,
+	  matlab/cspice_ckupf.m, matlab/cspice_ckw01.m,
+	  matlab/cspice_ckw02.m, matlab/cspice_ckw03.m,
+	  matlab/cspice_clight.m, matlab/cspice_clpool.m,
+	  matlab/cspice_cnmfrm.m, matlab/cspice_conics.m,
+	  matlab/cspice_convrt.m, matlab/cspice_cyllat.m,
+	  matlab/cspice_cylrec.m, matlab/cspice_cylsph.m,
+	  matlab/cspice_dafac.m, matlab/cspice_dafbbs.m,
+	  matlab/cspice_dafbfs.m, matlab/cspice_dafcls.m,
+	  matlab/cspice_dafcs.m, matlab/cspice_dafdc.m,
+	  matlab/cspice_dafec.m, matlab/cspice_daffna.m,
+	  matlab/cspice_daffpa.m, matlab/cspice_dafgda.m,
+	  matlab/cspice_dafgn.m, matlab/cspice_dafgs.m,
+	  matlab/cspice_dafhsf.m, matlab/cspice_dafopr.m,
+	  matlab/cspice_dafopw.m, matlab/cspice_dafps.m,
+	  matlab/cspice_dafrs.m, matlab/cspice_dafus.m,
+	  matlab/cspice_dasadc.m, matlab/cspice_dasadd.m,
+	  matlab/cspice_dasadi.m, matlab/cspice_dascls.m,
+	  matlab/cspice_dasec.m, matlab/cspice_dashfs.m,
+	  matlab/cspice_daslla.m, matlab/cspice_dasllc.m,
+	  matlab/cspice_dasonw.m, matlab/cspice_dasopr.m,
+	  matlab/cspice_dasops.m, matlab/cspice_dasopw.m,
+	  matlab/cspice_dasrdc.m, matlab/cspice_dasrdd.m,
+	  matlab/cspice_dasrdi.m, matlab/cspice_dasudc.m,
+	  matlab/cspice_dasudd.m, matlab/cspice_dasudi.m,
+	  matlab/cspice_daswbr.m, matlab/cspice_dazldr.m,
+	  matlab/cspice_dcyldr.m, matlab/cspice_deltet.m,
+	  matlab/cspice_dgeodr.m, matlab/cspice_dlabbs.m,
+	  matlab/cspice_dlabfs.m, matlab/cspice_dlabns.m,
+	  matlab/cspice_dlaens.m, matlab/cspice_dlafns.m,
+	  matlab/cspice_dlafps.m, matlab/cspice_dlaopn.m,
+	  matlab/cspice_dlatdr.m, matlab/cspice_dnearp.m,
+	  matlab/cspice_dpgrdr.m, matlab/cspice_dpmax.m,
+	  matlab/cspice_dpmin.m, matlab/cspice_dpr.m,
+	  matlab/cspice_drdazl.m, matlab/cspice_drdcyl.m,
+	  matlab/cspice_drdgeo.m, matlab/cspice_drdlat.m,
+	  matlab/cspice_drdpgr.m, matlab/cspice_drdsph.m,
+	  matlab/cspice_dskb02.m, matlab/cspice_dskcls.m,
+	  matlab/cspice_dskd02.m, matlab/cspice_dskgd.m,
+	  matlab/cspice_dskgtl.m, matlab/cspice_dski02.m,
+	  matlab/cspice_dskmi2.m, matlab/cspice_dskn02.m,
+	  matlab/cspice_dskobj.m, matlab/cspice_dskopn.m,
+	  matlab/cspice_dskp02.m, matlab/cspice_dskrb2.m,
+	  matlab/cspice_dsksrf.m, matlab/cspice_dskstl.m,
+	  matlab/cspice_dskv02.m, matlab/cspice_dskw02.m,
+	  matlab/cspice_dskx02.m, matlab/cspice_dskxsi.m,
+	  matlab/cspice_dskxv.m, matlab/cspice_dskz02.m,
+	  matlab/cspice_dsphdr.m, matlab/cspice_dtpool.m,
+	  matlab/cspice_ducrss.m, matlab/cspice_dvcrss.m,
+	  matlab/cspice_dvdot.m, matlab/cspice_dvhat.m,
+	  matlab/cspice_dvnorm.m, matlab/cspice_dvpool.m,
+	  matlab/cspice_dvsep.m, matlab/cspice_edlimb.m,
+	  matlab/cspice_ednmpt.m, matlab/cspice_edpnt.m,
+	  matlab/cspice_edterm.m, matlab/cspice_ekfind.m,
+	  matlab/cspice_ekgc.m, matlab/cspice_ekgd.m, matlab/cspice_ekgi.m,
+	  matlab/cspice_eknelt.m, matlab/cspice_el2cgv.m,
+	  matlab/cspice_et2lst.m, matlab/cspice_et2utc.m,
+	  matlab/cspice_etcal.m, matlab/cspice_eul2m.m,
+	  matlab/cspice_eul2xf.m, matlab/cspice_evsgp4.m,
+	  matlab/cspice_expool.m, matlab/cspice_fovray.m,
+	  matlab/cspice_fovtrg.m, matlab/cspice_frame.m,
+	  matlab/cspice_frinfo.m, matlab/cspice_frmnam.m,
+	  matlab/cspice_furnsh.m, matlab/cspice_gcpool.m,
+	  matlab/cspice_gdpool.m, matlab/cspice_georec.m,
+	  matlab/cspice_getelm.m, matlab/cspice_getfat.m,
+	  matlab/cspice_getfov.m, matlab/cspice_getfvn.m,
+	  matlab/cspice_gfdist.m, matlab/cspice_gfilum.m,
+	  matlab/cspice_gfoclt.m, matlab/cspice_gfpa.m,
+	  matlab/cspice_gfposc.m, matlab/cspice_gfrfov.m,
+	  matlab/cspice_gfrr.m, matlab/cspice_gfsep.m,
+	  matlab/cspice_gfsntc.m, matlab/cspice_gfstol.m,
+	  matlab/cspice_gfsubc.m, matlab/cspice_gftfov.m,
+	  matlab/cspice_gipool.m, matlab/cspice_gnpool.m,
+	  matlab/cspice_halfpi.m, matlab/cspice_hrmesp.m,
+	  matlab/cspice_hrmint.m, matlab/cspice_illum.m,
+	  matlab/cspice_illum_pl02.m, matlab/cspice_illum_plid_pl02.m,
+	  matlab/cspice_illumf.m, matlab/cspice_illumg.m,
+	  matlab/cspice_ilumin.m, matlab/cspice_inedpl.m,
+	  matlab/cspice_inelpl.m, matlab/cspice_inrypl.m,
+	  matlab/cspice_intmax.m, matlab/cspice_intmin.m,
+	  matlab/cspice_invort.m, matlab/cspice_invstm.m,
+	  matlab/cspice_j1900.m, matlab/cspice_j1950.m,
+	  matlab/cspice_j2000.m, matlab/cspice_j2100.m,
+	  matlab/cspice_jyear.m, matlab/cspice_kclear.m,
+	  matlab/cspice_kdata.m, matlab/cspice_kinfo.m,
+	  matlab/cspice_kplfrm.m, matlab/cspice_ktotal.m,
+	  matlab/cspice_latcyl.m, matlab/cspice_latrec.m,
+	  matlab/cspice_latsph.m, matlab/cspice_latsrf.m,
+	  matlab/cspice_ldpool.m, matlab/cspice_lgresp.m,
+	  matlab/cspice_lgrind.m, matlab/cspice_lgrint.m,
+	  matlab/cspice_limb_pl02.m, matlab/cspice_limbpt.m,
+	  matlab/cspice_llgrid_pl02.m, matlab/cspice_lmpool.m,
+	  matlab/cspice_lspcn.m, matlab/cspice_ltime.m,
+	  matlab/cspice_m2eul.m, matlab/cspice_m2q.m, matlab/cspice_mice.m,
+	  matlab/cspice_namfrm.m, matlab/cspice_nearpt.m,
+	  matlab/cspice_nextwd.m, matlab/cspice_npedln.m,
+	  matlab/cspice_npelpt.m, matlab/cspice_nplnpt.m,
+	  matlab/cspice_nthwd.m, matlab/cspice_nvc2pl.m,
+	  matlab/cspice_nvp2pl.m, matlab/cspice_occult.m,
+	  matlab/cspice_oscelt.m, matlab/cspice_oscltx.m,
+	  matlab/cspice_pckcov.m, matlab/cspice_pckfrm.m,
+	  matlab/cspice_pcpool.m, matlab/cspice_pdpool.m,
+	  matlab/cspice_pgrrec.m, matlab/cspice_phaseq.m,
+	  matlab/cspice_pi.m, matlab/cspice_pipool.m,
+	  matlab/cspice_pjelpl.m, matlab/cspice_pl2nvc.m,
+	  matlab/cspice_pl2nvp.m, matlab/cspice_pl2psv.m,
+	  matlab/cspice_pltar.m, matlab/cspice_pltexp.m,
+	  matlab/cspice_pltnp.m, matlab/cspice_pltnrm.m,
+	  matlab/cspice_pltvol.m, matlab/cspice_polyds.m,
+	  matlab/cspice_prop2b.m, matlab/cspice_psv2pl.m,
+	  matlab/cspice_pxform.m, matlab/cspice_pxfrm2.m,
+	  matlab/cspice_q2m.m, matlab/cspice_qderiv.m,
+	  matlab/cspice_qdq2av.m, matlab/cspice_qxq.m,
+	  matlab/cspice_radrec.m, matlab/cspice_rav2xf.m,
+	  matlab/cspice_raxisa.m, matlab/cspice_recazl.m,
+	  matlab/cspice_reccyl.m, matlab/cspice_recgeo.m,
+	  matlab/cspice_reclat.m, matlab/cspice_recpgr.m,
+	  matlab/cspice_recrad.m, matlab/cspice_recsph.m,
+	  matlab/cspice_repmc.m, matlab/cspice_repmct.m,
+	  matlab/cspice_repmd.m, matlab/cspice_repmf.m,
+	  matlab/cspice_repmi.m, matlab/cspice_repml.m,
+	  matlab/cspice_repmot.m, matlab/cspice_rotate.m,
+	  matlab/cspice_rotmat.m, matlab/cspice_rotvec.m,
+	  matlab/cspice_rpd.m, matlab/cspice_saelgv.m,
+	  matlab/cspice_scdecd.m, matlab/cspice_sce2c.m,
+	  matlab/cspice_sce2s.m, matlab/cspice_scencd.m,
+	  matlab/cspice_scfmt.m, matlab/cspice_scpart.m,
+	  matlab/cspice_scs2e.m, matlab/cspice_sct2e.m,
+	  matlab/cspice_sctiks.m, matlab/cspice_sincpt.m,
+	  matlab/cspice_spd.m, matlab/cspice_sphcyl.m,
+	  matlab/cspice_sphlat.m, matlab/cspice_sphrec.m,
+	  matlab/cspice_spkapo.m, matlab/cspice_spkcls.m,
+	  matlab/cspice_spkcov.m, matlab/cspice_spkcpo.m,
+	  matlab/cspice_spkcpt.m, matlab/cspice_spkcvo.m,
+	  matlab/cspice_spkcvt.m, matlab/cspice_spkez.m,
+	  matlab/cspice_spkezr.m, matlab/cspice_spkgeo.m,
+	  matlab/cspice_spklef.m, matlab/cspice_spkobj.m,
+	  matlab/cspice_spkopn.m, matlab/cspice_spkpos.m,
+	  matlab/cspice_spkpvn.m, matlab/cspice_spksfs.m,
+	  matlab/cspice_spkssb.m, matlab/cspice_spkuef.m,
+	  matlab/cspice_spkw08.m, matlab/cspice_spkw09.m,
+	  matlab/cspice_spkw10.m, matlab/cspice_spkw13.m,
+	  matlab/cspice_srfc2s.m, matlab/cspice_srfcss.m,
+	  matlab/cspice_srfnrm.m, matlab/cspice_srfrec.m,
+	  matlab/cspice_srfs2c.m, matlab/cspice_srfscc.m,
+	  matlab/cspice_srfxpt.m, matlab/cspice_stelab.m,
+	  matlab/cspice_stlabx.m, matlab/cspice_stpool.m,
+	  matlab/cspice_str2et.m, matlab/cspice_subpnt.m,
+	  matlab/cspice_subpt.m, matlab/cspice_subpt_pl02.m,
+	  matlab/cspice_subslr.m, matlab/cspice_subsol.m,
+	  matlab/cspice_subsol_pl02.m, matlab/cspice_surfnm.m,
+	  matlab/cspice_surfpt.m, matlab/cspice_surfpv.m,
+	  matlab/cspice_sxform.m, matlab/cspice_szpool.m,
+	  matlab/cspice_tangpt.m, matlab/cspice_term_pl02.m,
+	  matlab/cspice_termpt.m, matlab/cspice_timdef_get.m,
+	  matlab/cspice_timdef_set.m, matlab/cspice_timout.m,
+	  matlab/cspice_tipbod.m, matlab/cspice_tisbod.m,
+	  matlab/cspice_tkfram.m, matlab/cspice_tkvrsn.m,
+	  matlab/cspice_tparch.m, matlab/cspice_tparse.m,
+	  matlab/cspice_tpictr.m, matlab/cspice_trgsep.m,
+	  matlab/cspice_tsetyr.m, matlab/cspice_twopi.m,
+	  matlab/cspice_twovec.m, matlab/cspice_twovxf.m,
+	  matlab/cspice_tyear.m, matlab/cspice_unitim.m,
+	  matlab/cspice_unload.m, matlab/cspice_unorm.m,
+	  matlab/cspice_vdist.m, matlab/cspice_vhat.m,
+	  matlab/cspice_vnorm.m, matlab/cspice_vperp.m,
+	  matlab/cspice_vprjp.m, matlab/cspice_vprjpi.m,
+	  matlab/cspice_vproj.m, matlab/cspice_vprojg.m,
+	  matlab/cspice_vrotv.m, matlab/cspice_vsep.m,
+	  matlab/cspice_vupack.m, matlab/cspice_wncard.m,
+	  matlab/cspice_wncomd.m, matlab/cspice_wncond.m,
+	  matlab/cspice_wndifd.m, matlab/cspice_wnelmd.m,
+	  matlab/cspice_wnexpd.m, matlab/cspice_wnextd.m,
+	  matlab/cspice_wnfetd.m, matlab/cspice_wnfild.m,
+	  matlab/cspice_wnfltd.m, matlab/cspice_wnincd.m,
+	  matlab/cspice_wninsd.m, matlab/cspice_wnintd.m,
+	  matlab/cspice_wnreld.m, matlab/cspice_wnsumd.m,
+	  matlab/cspice_wnunid.m, matlab/cspice_wnvald.m,
+	  matlab/cspice_xf2eul.m, matlab/cspice_xf2rav.m,
+	  matlab/cspice_xfmsta.m, matlab/mice.mexa64,
+	  matlab/mice.mexmaci64, matlab/mice.mexw64, matlab/mice_bodc2n.m,
+	  matlab/mice_bodn2c.m, matlab/mice_bods2c.m, matlab/mice_dtpool.m,
+	  matlab/mice_nearpt.m, matlab/mice_spkezr.m, matlab/mice_spkpos.m,
+	  matlab/mice_srfxpt.m, matlab/mice_subpnt.m, matlab/mice_subpt.m,
+	  matlab/mice_subslr.m, matlab/zzmice_dp.m, matlab/zzmice_str.m:
+	  Updated to SPICE version N0067 released in January 2022, imported
+	  from mice.tar.Z available at
+	  https://naif.jpl.nasa.gov/naif/toolkit_MATLAB_PC_Linux_GCC_MATLAB9.x_64bit.html
+	  mice mex file for Mac OSX and Windows imported from
+	  https://naif.jpl.nasa.gov/naif/toolkit_MATLAB_MacIntel_OSX_AppleC_MATLAB9.x_64bit.html
+	  and
+	  https://naif.jpl.nasa.gov/naif/toolkit_MATLAB_PC_Windows_VisualC_MATLAB9.x_64bit.html
+
+2021-03-25  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* matlab/mice.mexw64:
+	  Added mex file for Windows 64 for SPICE version N0066, downloaded
+	  from
+	  https://naif.jpl.nasa.gov/naif/toolkit_MATLAB_PC_Windows_VisualC_MATLAB8.x_64bit.html.
+
+2021-03-25  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* data/downloadGenericKernels.sh, data/jupiter.tm.in,
+	  data/standard.tm.in:
+	  Minor updates of planetary ephemeris and Jupiter satellites
+	  ephemeris.
+
+2020-05-03  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* matlab/loadPlanetSpiceKernels.m:
+	  Fixed code typo.
+
+2020-05-01  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* data/generateMetaKernels.sh:
+	  Added metakernel moon.tm.
+
+2020-04-24  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* matlab/loadPlanetSpiceKernels.m:
+	  Clear all kernels before loading kernels for a given planet.
+
+2020-04-24  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* data/jupiter.tm.in, data/saturn.tm.in, data/standard.tm.in,
+	  data/uranus.tm.in:
+	  Updated templates for meta kernels with latest kernels.
+
+2020-04-24  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* data/downloadCassiniKernels.sh, data/downloadGenericKernels.sh,
+	  data/downloadJunoKernels.sh:
+	  Improved script with shell functions.  Added safeguard to trigger
+	  an error when URL not valid.	Updated to latest kernel files.
+
 2017-11-08  Patrick Guio <p.guio@ucl.ac.uk>
 
 	* data/downloadCassiniKernels.sh, data/downloadGenericKernels.sh,
