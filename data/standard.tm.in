@@ -1,6 +1,6 @@
 \begintext 
 --------------------------------------------------------
-  $Id: standard.tm.in,v 1.1 2017/10/25 10:59:26 patrick Exp $
+  $Id: standard.tm.in,v 1.3 2021/03/25 11:36:03 patrick Exp $
 
   Copyright (c) 2015 Patrick Guio <patrick.guio@gmail.com>
   All Rights Reserved.
@@ -42,7 +42,7 @@
   KERNELS_TO_LOAD = (
 
         'DATAROOT/naif0012.tls',
-        'DATAROOT/de430.bsp',
+        'DATAROOT/de440.bsp',
         'DATAROOT/pck00010.tpc'
 
          )

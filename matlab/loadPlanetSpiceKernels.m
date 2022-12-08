@@ -2,7 +2,7 @@ function loadPlanetSpiceKernels(planet,verbose)
 % function loadPlanetSpiceKernels(planet,verbose)
 
 %
-% $Id: loadPlanetSpiceKernels.m,v 1.5 2015/09/21 11:59:24 patrick Exp $
+% $Id: loadPlanetSpiceKernels.m,v 1.7 2020/05/02 22:34:20 patrick Exp $
 %
 % Copyright (c) 2015 Patrick Guio <patrick.guio@gmail.com>
 % All Rights Reserved.
@@ -23,6 +23,13 @@ function loadPlanetSpiceKernels(planet,verbose)
 if ~exist('verbose') || isempty(verbose),
   verbose = 0;
 end
+
+%  It's always good form to unload kernels after use,
+%  particularly in MATLAB due to data persistence.
+if verbose,
+  fprintf(1,'Clearing SPICE kernels\n');
+end
+cspice_kclear;
 
 % generic kernel path
 spiceKernelsPath = getSpiceGenericKernelsPath();

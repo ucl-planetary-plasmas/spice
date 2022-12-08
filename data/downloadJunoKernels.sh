@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# $Id: downloadJunoKernels.sh,v 1.2 2017/11/08 12:26:30 patrick Exp $
+# $Id: downloadJunoKernels.sh,v 1.3 2020/04/24 10:19:00 patrick Exp $
 #
 # Copyright (c) 2009
 # Patrick Guio <p.guio@ucl.ac.uk>
@@ -22,18 +22,28 @@
 # NAIF service site
 NAIF="https://naif.jpl.nasa.gov/pub/naif"
 # CASSINI SPICE data
-JUNO="$NAIF/JUNO/kernels/"
+KERNELS="$NAIF/JUNO/kernels/"
+# -N Turn on time-stamping
+CMD="wget -N"
+# curl preferred
+CMD="curl -# --fail --fail-early"
 
-# -N Turn on time-stamping for wget
-# -# Progress meter for curl 
-CMD="curl -#"
+die () {
+  echo "Problem accessing $1"
+  exit 1
+}
+
+function downloadFile {
+  if [ ! -e $3 ] ; then
+    echo "Downloading" $1 $3
+    $CMD $KERNELS/$2/$3 -o $3 || die $KERNELS/$2/$3
+  fi
+}
 
 # trajectory 
 # spk_*_YYMMDD_YYMMDD_yymmdd*
 # YYMMDD   coverage start and STOP UTC/SCET
 # yymmdd   file release date
-file=spk_pre_151003_160713_160223_joiPB_final
-if [ ! -e $file.bsp ] ; then
-  echo "Downloading spk data for Juno $file"
-  $CMD $JUNO/spk/$file.bsp -o $file.bsp 
-fi
+file=spk_pre_151003_160713_160223_joiPB_final.bsp
+downloadFile "spk data file for Juno" spk $file
+

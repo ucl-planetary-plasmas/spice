@@ -1,6 +1,6 @@
 \begintext 
 --------------------------------------------------------
-  $Id: uranus.tm.in,v 1.2 2017/10/25 11:07:48 patrick Exp $
+  $Id: uranus.tm.in,v 1.4 2022/02/17 08:48:10 patrick Exp $
 
   Copyright (c) 2015 Patrick Guio <patrick.guio@gmail.com>
   All Rights Reserved.
@@ -31,7 +31,7 @@
 
   KERNELS_TO_LOAD = (
 
-        'DATAROOT/ura112.bsp',
+        'DATAROOT/ura116.bsp',
 
          )
 

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# $Id: downloadCassiniKernels.sh,v 1.9 2017/11/08 12:26:30 patrick Exp $
+# $Id: downloadCassiniKernels.sh,v 1.10 2020/04/24 10:19:00 patrick Exp $
 #
 # Copyright (c) 2009
 # Patrick Guio <p.guio@ucl.ac.uk>
@@ -22,22 +22,30 @@
 # NAIF service site
 NAIF="https://naif.jpl.nasa.gov/pub/naif"
 # CASSINI SPICE data
-CASSINI="$NAIF/CASSINI/kernels/"
+KERNELS="$NAIF/CASSINI/kernels/"
+# -N Turn on time-stamping
+CMD="wget -N"
+# curl preferred
+CMD="curl -# --fail --fail-early"
 
-# -N Turn on time-stamping for wget
-# -# Progress meter for curl 
-CMD="curl -#"
+die () {
+  echo "Problem accessing $1"
+  exit 1
+}
 
-# Upload orientation data for planets, natural
+function downloadFile {
+  if [ ! -e $3 ] ; then
+    echo "Downloading" $1 $3
+    $CMD $KERNELS/$2/$3 -o $3 || die $KERNELS/$2/$3
+  fi
+}
+
+# orientation data for planets, natural
 # satellites, the Sun, and selected asteroids
-file=171017R_SCPSE_17117_17146
-if [ ! -e $file.bsp ] || [ ! -e $file.bsp.lbl ] ; then
-  echo "Downloading spk data for Cassini $file"
-  $CMD $CASSINI/spk/$file.bsp -o $file.bsp 
-  $CMD $CASSINI/spk/$file.bsp.lbl -o $file.bsp.lbl
-fi
-file=cpck21Oct2017
-if [ ! -e $file.tpc ] ; then
-  echo "Downloading pck data for Cassini $file"
-  $CMD $CASSINI/pck/$file.tpc -o $file.tpc 
-fi
+file=171017R_SCPSE_17117_17146.bsp
+downloadFile "spk data file for Cassini" spk $file
+downloadFile "spk data file for Cassini" spk $file.lbl
+
+file=cpck15Dec2017.tpc    
+downloadFile "pck data file for Cassini" pck $file
+

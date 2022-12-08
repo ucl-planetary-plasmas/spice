@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# $Id: generateMetaKernels.sh,v 1.1 2017/10/25 10:59:26 patrick Exp $
+# $Id: generateMetaKernels.sh,v 1.2 2020/05/01 14:25:58 patrick Exp $
 #
 # Copyright (c) 2017 Patrick Guio <patrick.guio@gmail.com>
 # All Rights Reserved.
@@ -33,3 +33,6 @@ METAKERNELS="standard.tm mars.tm jupiter.tm saturn.tm uranus.tm"
 for metakernel in $METAKERNELS; do
   createmetakernel $metakernel
 done
+
+echo "linking moon.tm to standard.tm"
+ln -fs standard.tm moon.tm

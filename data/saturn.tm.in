@@ -1,6 +1,6 @@
 \begintext 
 --------------------------------------------------------
-  $Id: saturn.tm.in,v 1.3 2017/10/25 11:34:51 patrick Exp $
+  $Id: saturn.tm.in,v 1.5 2022/02/17 08:48:10 patrick Exp $
 
   Copyright (c) 2015 Patrick Guio <patrick.guio@gmail.com>
   All Rights Reserved.
@@ -34,8 +34,8 @@
 
   KERNELS_TO_LOAD = (
 
-        'DATAROOT/sat393.bsp',
-        'DATAROOT/cpck21Oct2017.tpc',
+        'DATAROOT/sat450.bsp',
+        'DATAROOT/cpck15Dec2017.tpc',
 
          )
 

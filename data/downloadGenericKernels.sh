@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# $Id: downloadGenericKernels.sh,v 1.15 2017/11/08 12:26:30 patrick Exp $
+# $Id: downloadGenericKernels.sh,v 1.18 2022/02/17 08:48:09 patrick Exp $
 #
 # Copyright (c) 2009
 # Patrick Guio <p.guio@ucl.ac.uk>
@@ -23,57 +23,51 @@
 NAIF="https://naif.jpl.nasa.gov/pub/naif"
 # generic kernels data
 KERNELS="$NAIF/generic_kernels"
-
 # -N Turn on time-stamping
 CMD="wget -N"
-CMD="curl -#"
+# curl preferred
+CMD="curl -# --fail --fail-early"
 
-# Upload a leapseconds kernel
+die () {
+  echo "Problem accessing $1"
+	exit 1
+}
+
+function downloadFile {
+  if [ ! -e $3 ] ; then
+    echo "Downloading" $1 $3
+    $CMD $KERNELS/$2/$3 -o $3 || die $KERNELS/$2/$3
+  fi
+}
+
+# leapseconds kernel
 file=naif0012.tls
-if [ ! -e $file ] ; then
-  echo "Downloading leapseconds kernel $file"
-  $CMD $KERNELS/lsk/$file -o $file
-fi
+downloadFile "leapseconds kernel" lsk $file
 
-# Upload planetary ephemeris 
-file=de430
-if [ ! -e $file.bsp ] || [ ! -e ${file}_tech-comments.txt ] ; then
-  echo "Downloading planetary ephemeris $file"
-  $CMD $KERNELS/spk/planets/${file}_tech-comments.txt -o ${file}_tech-comments.txt
-  $CMD $KERNELS/spk/planets/$file.bsp -o $file.bsp
-fi
+# planetary ephemeris 
+file=de440
+downloadFile "planetary ephemeris file" spk/planets ${file}_tech-comments.txt
+downloadFile "planetary ephemeris file" spk/planets $file.bsp
 
-# Upload satellite ephemeris 
-
+# satellite ephemeris 
 file=mar097
-if [ ! -e $file.bsp ] || [ ! -e $file.cmt ] ; then
-  echo "Downloading Mars satellites ephemeris $file"
-  $CMD $KERNELS/spk/satellites/$file.cmt -o $file.cmt
-  $CMD $KERNELS/spk/satellites/$file.bsp -o $file.bsp
-fi
-file=jup329
-if [ ! -e $file.bsp ] || [ ! -e $file.cmt ] ; then
-  echo "Downloading Jupiter satellites ephemeris $file"
-  $CMD $KERNELS/spk/satellites/$file.cmt -o $file.cmt
-  $CMD $KERNELS/spk/satellites/$file.bsp -o $file.bsp
-fi
-file=sat393
-if [ ! -e $file.bsp ] || [ ! -e $file.cmt ] ; then
-  echo "Downloading Saturn satellites ephemeris $file"
-  $CMD $KERNELS/spk/satellites/$file.cmt -o $file.cmt
-  $CMD $KERNELS/spk/satellites/$file.bsp -o $file.bsp
-fi
-file=ura112
-if [ ! -e $file.bsp ] || [ ! -e $file.cmt ] ; then
-  echo "Downloading Uranus satellites ephemeris $file"
-  $CMD $KERNELS/spk/satellites/$file.cmt -o $file.cmt
-  $CMD $KERNELS/spk/satellites/$file.bsp -o $file.bsp
-fi
+downloadFile "Mars satellites ephemeris file" spk/satellites $file.cmt
+downloadFile "Mars satellites ephemeris file" spk/satellites $file.bsp
 
-# Upload orientation data for planets, natural
+file=jup365
+downloadFile "Jupiter satellites ephemeris" spk/satellites $file.cmt
+downloadFile "Jupiter satellites ephemeris" spk/satellites $file.bsp
+
+file=sat450
+downloadFile "Saturn satellites ephemeris" spk/satellites $file.cmt
+downloadFile "Saturn satellites ephemeris" spk/satellites $file.bsp
+
+file=ura116
+downloadFile "Uranus satellites ephemeris" spk/satellites $file.cmt
+downloadFile "Uranus satellites ephemeris" spk/satellites $file.bsp
+
+# orientation data for planets, natural
 # satellites, the Sun, and selected asteroids
 file=pck00010.tpc
-if [ ! -e $file ] ; then
-  echo "Downloading PcK data $file"
-  $CMD $KERNELS/pck/$file -o $file
-fi
+downloadFile "PcK data" pck $file
+
