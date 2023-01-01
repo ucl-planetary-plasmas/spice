@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# $Id: downloadGenericKernels.sh,v 1.18 2022/02/17 08:48:09 patrick Exp $
+# $Id: downloadGenericKernels.sh,v 1.19 2022/12/29 10:38:05 patrick Exp $
 #
 # Copyright (c) 2009
 # Patrick Guio <p.guio@ucl.ac.uk>
@@ -68,6 +68,6 @@ downloadFile "Uranus satellites ephemeris" spk/satellites $file.bsp
 
 # orientation data for planets, natural
 # satellites, the Sun, and selected asteroids
-file=pck00010.tpc
+file=pck00011.tpc
 downloadFile "PcK data" pck $file
 

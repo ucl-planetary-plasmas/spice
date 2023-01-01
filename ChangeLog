@@ -1,3 +1,9 @@
+2022-12-29  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* data/downloadGenericKernels.sh, data/standard.tm.in:
+	  Updated to latest generic PCK's based on the 2015 IAU WGCCRE
+	  report.
+
 2022-02-17  Patrick Guio <p.guio@ucl.ac.uk>
 
 	* data/downloadGenericKernels.sh, data/saturn.tm.in,
@@ -239,7 +245,7 @@
 	  Minor updates of planetary ephemeris and Jupiter satellites
 	  ephemeris.
 
-2020-05-03  Patrick Guio <p.guio@ucl.ac.uk>
+2020-05-02  Patrick Guio <p.guio@ucl.ac.uk>
 
 	* matlab/loadPlanetSpiceKernels.m:
 	  Fixed code typo.
