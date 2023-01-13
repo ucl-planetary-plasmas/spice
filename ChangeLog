@@ -1,3 +1,8 @@
+2023-01-13  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* data/downloadGenericKernels.sh, data/saturn.tm.in:
+	  Updated Saturn kernel to sat452.
+
 2022-12-29  Patrick Guio <p.guio@ucl.ac.uk>
 
 	* data/downloadGenericKernels.sh, data/standard.tm.in:
@@ -245,7 +250,7 @@
 	  Minor updates of planetary ephemeris and Jupiter satellites
 	  ephemeris.
 
-2020-05-02  Patrick Guio <p.guio@ucl.ac.uk>
+2020-05-03  Patrick Guio <p.guio@ucl.ac.uk>
 
 	* matlab/loadPlanetSpiceKernels.m:
 	  Fixed code typo.
