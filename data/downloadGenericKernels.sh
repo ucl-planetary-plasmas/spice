@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #
-# $Id: downloadGenericKernels.sh,v 1.19 2022/12/29 10:38:05 patrick Exp $
+# $Id: downloadGenericKernels.sh,v 1.20 2023/01/13 11:47:24 patrick Exp $
 #
 # Copyright (c) 2009
 # Patrick Guio <p.guio@ucl.ac.uk>
@@ -58,7 +58,7 @@ file=jup365
 downloadFile "Jupiter satellites ephemeris" spk/satellites $file.cmt
 downloadFile "Jupiter satellites ephemeris" spk/satellites $file.bsp
 
-file=sat450
+file=sat452
 downloadFile "Saturn satellites ephemeris" spk/satellites $file.cmt
 downloadFile "Saturn satellites ephemeris" spk/satellites $file.bsp
 
