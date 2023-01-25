@@ -92,6 +92,7 @@ Installation scripts
 or run the shell script downloadGenericKernels.sh in data directory
 
 % cd data
+
 % sh downloadGenericKernels.sh
 
 then install the meta kernels
