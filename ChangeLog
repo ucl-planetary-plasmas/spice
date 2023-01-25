@@ -1,6 +1,11 @@
 2023-01-25  Patrick Guio <p.guio@ucl.ac.uk>
 
-	* README:
+	* README.md:
+	  Minor cosmetic change and renamed to Markdown extension .md
+
+2023-01-25  Patrick Guio <p.guio@ucl.ac.uk>
+
+	* README.md:
 	  Added some information and structure.
 
 2023-01-13  Patrick Guio <p.guio@ucl.ac.uk>
@@ -556,7 +561,7 @@
 
 2014-07-24  Patrick Guio <p.guio@ucl.ac.uk>
 
-	* README, data/downloadGenericKernels.sh:
+	* README.md, data/downloadGenericKernels.sh:
 	  Updated latest generic kernels.
 
 2014-07-24  Patrick Guio <p.guio@ucl.ac.uk>
@@ -912,7 +917,7 @@
 
 2009-02-26  Patrick Guio <p.guio@ucl.ac.uk>
 
-	* README:
+	* README.md:
 	  Added README file about SPICE and especially how to download
 	  generic kernels.
 
