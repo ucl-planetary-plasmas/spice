@@ -2,6 +2,9 @@
 Date: 24 July 2014
 ==================
 
+Introduction
+-------------
+
 The Navigation and Ancillary Information Facility (NAIF) provides NASA
 planetary flight projects and NASA funded professional planetary researchers
 an information system named "SPICE" to assist scientists in planning and
@@ -18,6 +21,9 @@ MATLAB®.
 
 More information is available at the SPICE project website at
 http://naif.jpl.nasa.gov/naif/
+
+Kernels installation
+---------------------
 
 In order to run SPICE you need to load generic kernels. These kernels can
 be downloaded from the anonymous ftp server at
@@ -80,6 +86,16 @@ wget ftp://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/jup310.cmt
 wget ftp://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/sat365.cmt
 wget ftp://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/ura112.cmt
 
+Installation scripts
+--------------------
+
 or run the shell script downloadGenericKernels.sh in data directory
+
 % cd data
 % sh downloadGenericKernels.sh
+
+then install the meta kernels
+
+% sh generateMetaKernels.sh
+
+
